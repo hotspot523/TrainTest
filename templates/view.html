@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Train Schedules</title>
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class=page>
+    <meta http-equiv="refresh" content="10">
+    <h1>Live Train Running Status</h1>
+    {% for table in tables %}
+        <h2>{{ titles[loop.index] }}</h2>
+        {{ table|safe }}
+    {% endfor %}
+
+</div>
+
+</body>
+</html>
